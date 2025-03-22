@@ -1,0 +1,2 @@
+Hello, ${NAME}!
+Current date: $(date +%Y)

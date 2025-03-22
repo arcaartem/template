@@ -1,0 +1,3 @@
+Name: ${NAME}
+Email: ${EMAIL}
+Role: ${ROLE}

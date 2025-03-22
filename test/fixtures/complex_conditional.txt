@@ -1,0 +1,13 @@
+@if [ "${STATUS}" = "active" ]
+User ${NAME} is active
+@if [ "${ADMIN}" = "true" ]
+And has admin privileges
+@else
+But is a regular user
+@endif
+@else
+User ${NAME} is inactive
+@if [ "${LAST_SEEN}" ]
+Last seen: ${LAST_SEEN}
+@endif
+@endif

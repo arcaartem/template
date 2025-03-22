@@ -1,0 +1,12 @@
+Start
+@if [ "${OUTER}" = "true" ]
+    Outer true
+    @if [ "${INNER}" = "true" ]
+        Inner true
+    @else
+        Inner false
+    @endif
+@else
+    Outer false
+@endif
+End

@@ -1,0 +1,30 @@
+Start
+@if [ "${A}" = "true" ]
+A is true
+    @if [ "${B}" = "true" ]
+    A and B are true
+        @if [ "${C}" = "true" ]
+        A, B, and C are true
+        @else
+        A and B are true, but C is false
+        @endif
+    @else
+    A is true but B is false
+        @if [ "${C}" = "true" ]
+        A is true, B is false, C is true
+        @else
+        A is true, B and C are false
+        @endif
+    @endif
+@else
+A is false
+    @if [ "${B}" = "true" ]
+    A is false but B is true
+        @if [ "${C}" = "true" ]
+        A is false, but B and C are true
+        @else
+        A is false, B is true, C is false
+        @endif
+    @endif
+@endif
+End

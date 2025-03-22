@@ -1,0 +1,5 @@
+@if [ "${SHOW_GREETING}" = "true" ]
+Hello, ${NAME}!
+@else
+Goodbye, ${NAME}!
+@endif

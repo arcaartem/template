@@ -1,0 +1,20 @@
+@if [ "${LEVEL1}" = "true" ]
+    Level 1 true
+    @if [ "${LEVEL2}" = "true" ]
+        Level 2 true
+        @if [ "${LEVEL3}" = "true" ]
+            Level 3 true
+        @else
+            Level 3 false
+        @endif
+    @else
+        Level 2 false
+        @if [ "${LEVEL3}" = "true" ]
+            Level 2 false, Level 3 true
+        @else
+            Level 2 false, Level 3 false
+        @endif
+    @endif
+@else
+    Level 1 false
+@endif

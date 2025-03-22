@@ -1,0 +1,6 @@
+Welcome to our platform!
+
+Your profile details:
+@include user_profile.txt
+
+Status: ${STATUS}

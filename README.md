@@ -1,6 +1,6 @@
 # Pure Shell Template Engine
 
-A lightweight, dependency-free template engine written in pure shell script. It supports variable substitution, conditionals, subshell commands, and file inclusion.
+A lightweight, dependency-free template engine written in POSIX compliant shell script. It supports variable substitution, conditionals, subshell commands, and file inclusion.
 
 ## Features
 
@@ -18,6 +18,46 @@ Simply download the script and make it executable:
 
 ```bash
 chmod +x template.sh
+```
+
+## Development Setup
+
+### Prerequisites
+
+- A POSIX-compliant shell (sh, bash, or zsh)
+- Git (for cloning the repository)
+
+### Setting Up the Development Environment
+
+1. Clone the repository:
+```bash
+git clone git@github.com:arcaartem/template.git
+cd template
+```
+
+2. Make the template script executable:
+```bash
+chmod +x src/template.sh
+```
+
+3. Install BATS (Bash Automated Testing System - see documentation for more up to date installation instructions):
+```bash
+# On macOS with Homebrew:
+brew install bats
+
+# On Ubuntu/Debian:
+sudo apt-get install bats
+
+# On Fedora:
+sudo dnf install bats
+```
+
+### Running Tests
+
+The project uses BATS for testing. To run the test suite:
+
+```bash
+bats test/template.bats
 ```
 
 ## Usage
